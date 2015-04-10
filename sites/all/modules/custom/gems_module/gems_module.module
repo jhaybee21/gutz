@@ -1,0 +1,198 @@
+<?php
+
+/**
+ * GEMS Custom Functions
+ */
+function gems_footer_social_media($type) {
+	$form["fieldset_{$type}"] = array(
+		"#type" => "fieldset",
+		"#title" => t(ucwords("{$type}")),
+		"#collapsible" => TRUE,
+		"#collapsed" => TRUE
+	);
+
+	$form["fieldset_{$type}"]["{$type}_textfield"] = array(
+		"#type" => "textfield",
+		"#title" => t(ucwords("{$type} link")),
+		"#default_value" => variable_get("{$type}_textfield", ""),
+		"#description" => "Link to you {$type} account",
+		"#size" => 31
+	);
+
+	$form["fieldset_{$type}"]["{$type}_textfield_label_1"] = array(
+	  "#type" => "textfield",
+	  "#title" => t(ucwords("Label for first account")),
+	  "#default_value" => variable_get("{$type}_textfield_label_1", ""),
+	  "#description" => "Link to your first {$type} account",
+	  "#size" => 31
+	 );
+
+	  $form["fieldset_{$type}"]["{$type}_textfield_2"] = array(
+	  "#type" => "textfield",
+	  "#title" => t(ucwords("Second {$type} link")),
+	  "#default_value" => variable_get("{$type}_textfield_2", ""),
+	  "#description" => "Link to your second {$type} account",
+	  "#size" => 31
+	 );
+
+	   $form["fieldset_{$type}"]["{$type}_textfield_label_2"] = array(
+	  "#type" => "textfield",
+	  "#title" => t(ucwords("Label for second account")),
+	  "#default_value" => variable_get("{$type}_textfield_label_2", ""),
+	  "#description" => "Link to your second {$type} account",
+	  "#size" => 31
+	 );
+	$form["fieldset_{$type}"]["{$type}_imagefield"] = array(
+		"#type" => "managed_file",
+		"#title" => t(ucwords("{$type} image")),
+		"#default_value" => variable_get("{$type}_imagefield_fid", ""),
+		"#description" => "Select an image. Only *.png image is allowed.",
+		"#upload_location" => "public://block_image/",
+		"#upload_validators" => array(
+			'file_validate_extensions' => array('png'),
+		)
+	);
+
+	return $form;
+}
+
+function gems_module_block_save($delta = "", $edit = array()) {
+	switch ($delta) {
+		case 'footer_content':
+
+
+			// Save textfield
+			variable_set("instagram_textfield", $edit["instagram_textfield"]);
+			variable_set("facebook_textfield", $edit["facebook_textfield"]);
+			variable_set("twitter_textfield", $edit["twitter_textfield"]);
+			variable_set("youtube_textfield", $edit["youtube_textfield"]);
+
+			 // Save textfield 2
+		   variable_set("instagram_textfield_2", $edit["instagram_textfield_2"]);
+		   variable_set("facebook_textfield_2", $edit["facebook_textfield_2"]);
+		   variable_set("twitter_textfield_2", $edit["twitter_textfield_2"]);
+		   
+
+		   // Save label 1
+		   variable_set("instagram_textfield_label_1", $edit["instagram_textfield_label_1"]);
+		   variable_set("facebook_textfield_label_1", $edit["facebook_textfield_label_1"]);
+		   variable_set("twitter_textfield_label_1", $edit["twitter_textfield_label_1"]);
+		   variable_set("youtube_textfield_label_1", $edit["youtube_textfield_label_1"]);
+
+		   // Save label 2
+		   variable_set("instagram_textfield_label_2", $edit["instagram_textfield_label_2"]);
+		   variable_set("facebook_textfield_label_2", $edit["facebook_textfield_label_2"]);
+		   variable_set("twitter_textfield_label_2", $edit["twitter_textfield_label_2"]);
+		   
+					
+
+      // Saving the file
+			gems_module_social_media_upload_block_save("instagram", $edit["instagram_imagefield"], $delta);
+			gems_module_social_media_upload_block_save("facebook", $edit["facebook_imagefield"], $delta);
+			gems_module_social_media_upload_block_save("twitter", $edit["twitter_imagefield"], $delta);
+			gems_module_social_media_upload_block_save("youtube", $edit["youtube_imagefield"], $delta);
+		break;
+	}
+}
+
+function gems_module_get_image($fid) {
+	$image = file_load(variable_get($fid));
+	return '<img src="'. file_create_url($image->uri) .'" class="icons" width="20" />';
+}
+
+function gems_module_footer_content_block_view() {
+	$html = '';
+	$html .=
+		'<div class="tagline"><h2 class="block-title"> Where To Find Us</h2> </div>
+		 <div class="social-media-icons large-12">
+
+		 <div class="small-12 large-12 columns social">
+				<div class="icon"> '. gems_module_get_image('instagram_imagefield_fid') .' </div>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('instagram_textfield') .'" >'. variable_get('instagram_textfield_label_1') .'</a>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('instagram_textfield_2') .'">'. variable_get('instagram_textfield_label_2') .'</a>
+		</div>
+		<div class="small-12 large-12 columns social">
+				<div class="icon"> '. gems_module_get_image('facebook_imagefield_fid') .' </div>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('facebook_textfield') .'">'. variable_get('facebook_textfield_label_1') .'</a>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('facebook_textfield_2') .'">'. variable_get('facebook_textfield_label_2') .'</a>
+		</div>
+		<div class="small-12 large-12 columns social">
+				<div class="icon">  '. gems_module_get_image('twitter_imagefield_fid') .' </div>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('twitter_textfield') .'">'. variable_get('twitter_textfield_label_1') .'</a>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('twitter_textfield_2') .'">'. variable_get('twitter_textfield_label_2') .'</a>
+		</div>
+		<div class="small-12 large-12 columns social">
+				<div class="icon"> '. gems_module_get_image('youtube_imagefield_fid') .' </div>
+				<a target="_blank" class="large-12 columns" href="'. variable_get('youtube_textfield') .'">'. variable_get('youtube_textfield_label_1') .'</a>
+		</div>
+			</div>';
+
+	return $html;
+}
+
+/**
+ * Implements hook_init().
+ *
+ * function gems_module_init() {
+ *   if (arg(0) == "node" && arg(1) == "add" && arg(2) == "page") {
+ *     drupal_add_js(drupal_get_path('theme', 'gems').'/js/index.js',  array('scope' => 'footer'));
+ *   }
+ * }
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function gems_module_block_info() {
+	$blocks = array();
+
+	$blocks['footer_content'] = array(
+		'info' => t('Social Media Accounts')
+	);
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function gems_module_block_configure($delta = "") {
+	$form = array();
+
+	switch ($delta) {
+		case 'footer_content':
+			array_push($form, gems_footer_social_media("instagram"));
+			array_push($form, gems_footer_social_media("facebook"));
+			array_push($form, gems_footer_social_media("twitter"));
+			array_push($form, gems_footer_social_media("youtube"));
+		break;
+	}
+
+	return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+
+function gems_module_social_media_upload_block_save($social, $type, $delta) {
+	$file = file_load($type);
+	$file->status = FILE_STATUS_PERMANENT;
+	file_save($file);
+	$block = block_load('gems_module', $delta);
+	file_usage_add($file, 'gems_module', 'block', $block->bid);
+	variable_set("{$social}_imagefield_fid", $file->fid);
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function gems_module_block_view($delta='') {
+  $block = array();
+
+  switch($delta) {
+    case 'footer_content':
+      $block['content'] = gems_module_footer_content_block_view();
+      break;
+  }
+  return $block;
+}

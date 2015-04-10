@@ -1,0 +1,11 @@
+<?php
+/**
+ * Implements hook_block_list_alter()
+ *
+ * Hides the right sidebar on some pages.
+ */
+function page_unset_page_alter(&$page) {
+  if (current_path() == 'content/*') {
+    unset($page['sidebar_second']);
+  }
+}

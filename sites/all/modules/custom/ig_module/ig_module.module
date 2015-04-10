@@ -1,0 +1,130 @@
+<?php
+
+/**
+ * GEMS Custom Functions
+ */
+function ig_footer_social_media($type) {
+	$form["fieldset_{$type}"] = array(
+		"#type" => "fieldset",
+		"#title" => t(ucwords("{$type}")),
+		"#collapsible" => TRUE,
+		"#collapsed" => TRUE
+	);
+
+	$form["fieldset_{$type}"]["{$type}_textfield"] = array(
+		"#type" => "textfield",
+		"#title" => t(ucwords("{$type} link")),
+		"#default_value" => variable_get("{$type}_textfield", ""),
+		"#description" => "Link to you {$type} account",
+		"#size" => 31
+	);
+
+	$form["fieldset_{$type}"]["{$type}_imagefield"] = array(
+		"#type" => "managed_file",
+		"#title" => t(ucwords("{$type} image")),
+		"#default_value" => variable_get("{$type}_imagefield_fid", ""),
+		"#description" => "Select an image. Only *.png image is allowed.",
+		"#upload_location" => "public://block_image/",
+		"#upload_validators" => array(
+			'file_validate_extensions' => array('png'),
+		)
+	);
+
+	return $form;
+}
+
+function ig_module_block_save($delta = "", $edit = array()) {
+	switch ($delta) {
+		case 'footer_content':
+
+
+			// Save textfield
+			variable_set("instagram_textfield", $edit["instagram_textfield"]);
+			
+
+      // Saving the file
+			gems_module_social_media_upload_block_save("facebook", $edit["instagram_imagefield"], $delta);
+		break;
+	}
+}
+
+function ig_module_get_image($fid) {
+	$image = file_load(variable_get($fid));
+	return '<img src="'. file_create_url($image->uri) .'" class="icons" width="20" />';
+}
+
+function ig_module_footer_content_block_view() {
+	$html = '';
+	$html .=
+		'<div class="social">
+				<div class="icon"> '. gems_module_get_image('instagram_imagefield_fid') .' </div>
+				<a class="large-12 columns" href="'. variable_get('instagram_textfield') .'">richardguttierez</a>
+				<a class="large-12 columns" href="'. variable_get('instagram_textfield') .'">sarahlahbati</a>
+		</div>';
+
+	return $html;
+}
+
+/**
+ * Implements hook_init().
+ *
+ * function gems_module_init() {
+ *   if (arg(0) == "node" && arg(1) == "add" && arg(2) == "page") {
+ *     drupal_add_js(drupal_get_path('theme', 'gems').'/js/index.js',  array('scope' => 'footer'));
+ *   }
+ * }
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function ig_module_block_info() {
+	$blocks = array();
+
+	$blocks['footer_content'] = array(
+		'info' => t('IG Accounts')
+	);
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function ig_module_block_configure($delta = "") {
+	$form = array();
+
+	switch ($delta) {
+		case 'footer_content':
+			array_push($form, ig_footer_social_media("instagram"));
+		break;
+	}
+
+	return $form;
+}
+
+/**
+ * Implements hook_block_save().
+ */
+
+function ig_module_social_media_upload_block_save($social, $type, $delta) {
+	$file = file_load($type);
+	$file->status = FILE_STATUS_PERMANENT;
+	file_save($file);
+	$block = block_load('ig_module', $delta);
+	file_usage_add($file, 'ig_module', 'block', $block->bid);
+	variable_set("{$social}_imagefield_fid", $file->fid);
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ig_module_block_view($delta='') {
+  $block = array();
+
+  switch($delta) {
+    case 'footer_content':
+      $block['content'] = ig_module_footer_content_block_view();
+      break;
+  }
+  return $block;
+}

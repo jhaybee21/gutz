@@ -1,0 +1,6 @@
+: $Id = $
+name = Page Unset
+description = Page unsetting
+package = Gutierrez
+version = "7.x-1.0"
+core = 7.x

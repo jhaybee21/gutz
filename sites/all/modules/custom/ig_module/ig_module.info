@@ -1,0 +1,6 @@
+: $Id = $
+name = IG Module
+description = Functionality for Gems Module
+package = IG Module
+version = "7.x-1.0"
+core = 7.x

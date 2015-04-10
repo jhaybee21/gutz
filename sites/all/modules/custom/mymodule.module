@@ -1,0 +1,13 @@
+<?php
+/**
+* Implements hook_theme().
+*/
+function mymodule_theme() {
+return array(
+'mymodule-page' => array(
+'template' => 'templates/mymodule-page',
+'render element' => 'page',
+),
+);
+}
+?> 

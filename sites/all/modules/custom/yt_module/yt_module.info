@@ -1,0 +1,6 @@
+: $Id = $
+name = Youtube Module
+description = Functionality for Gems Module
+package = Youtube Module
+version = "7.x-1.0"
+core = 7.x
