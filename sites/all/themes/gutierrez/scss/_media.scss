@@ -107,7 +107,12 @@
 
 		}
 	}
-
+	.main{
+		width:100% $i;
+	}
+	.sidebar-second{
+		width:100% $i;
+	}
 	.main .views-field-fb-likes, .main .views-field-tweets {
 		margin-left:2px $i;
 		width: 30% $i;
@@ -134,6 +139,9 @@
 		top: 20px $i;
 	}
 	.node-type-webform .webform-client-form .webform-component-textfield, .node-type-webform .webform-client-form .webform-component-email{
+		width: 100% $i;
+	}
+	.post-article-container .post-article .hover-container , .sidebar-third{
 		width: 100% $i;
 	}
 	.copyright, .developer{

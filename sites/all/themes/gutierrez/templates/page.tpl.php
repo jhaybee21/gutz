@@ -204,96 +204,18 @@
  <?php endif; ?>
 
 <!-- Popular Post -->
- <div class="row post-article-container">
-    <h1>Popular Articles</h1>
-    <div class="row large-9 post-article">
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/0.jpg');">
-            <div class="hover-content">
-              <div class="hover-content-cat">
-                  <span>Lorem</span>
-                </div>
-                <hr class="line">
-                <div class="hover-content-title column">
-                  <h1> Lorem</h1>
-                </div>
-                <div class="hover-content-date">
-                  <span>January 25, 2015</span>
-                </div>
-            </div>
-        </div>
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/1.jpg');">
-            <div class="hover-content">
-                <div class="hover-content-cat">
-                  <span> Lorem</span>
-                </div>
-                <hr class="line">
-                <div class="hover-content-title column">
-                  <h1> Lorem</h1>
-                </div>
-                <div class="hover-content-date">
-                  <span>January 25, 2015</span>
-                </div>
-            </div>
-        </div>
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/2.jpg');">
-                <div class="hover-content">
-                  <div class="hover-content-cat">
-                    <span>Lorem</span>
-                  </div>
-                  <hr class="line">
-                  <div class="hover-content-title column">
-                    <h1>Lorem Ipsum delta asas as</h1>
-                  </div>
-                  <div class="hover-content-date">
-                    <span>January 25, 2015</span>
-                  </div>
-            </div>
-        </div>
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/3.jpg');">
-                <div class="hover-content">
-                  <div class="hover-content-cat">
-                    <span> Lorem</span>
-                  </div>
-                  <hr class="line">
-                  <div class="hover-content-title column">
-                    <h1> Lorem</h1>
-                  </div>
-                  <div class="hover-content-date">
-                    <span>January 25, 2015</span>
-                  </div>
-            </div>
-        </div>
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/4.jpg');">
-          <div class="hover-content">
-            <div class="hover-content-cat">
-              <span>Lorem 1<span>
-            </div>
-            <hr class="line">
-            <div class="hover-content-title column">
-              <h1>Lorem Ipsum delta asas as </h1>
-            </div>
-            <div class="hover-content-date">
-              <span>January 25, 2015</span>
-            </div>
-          </div>
-        </div>
-        <div class="small-12 large-4 columns hover-container" style="background: url('<?php print base_path() . path_to_theme() .'/' ?>images/blog/5.jpg');">
-          <div class="hover-content">
-            <div class="hover-content-cat">
-                  <span>Lorem </span>
-                </div>
-            <hr class="line">
-            <div class="hover-content-title column">
-              <h1> Lorem Ipsum delta asas as</h1>
-            </div>
-            <div class="hover-content-date">
-              <span>January 25, 2015</span>
-            </div>
-         </div>
-        </div>
+ <?php if (!empty($page['popular_post'])): ?>
+    <div class="row post-article-container">
+      <h1>Popular Articles</h1>
+      <div class="row large-9 post-article">
+      <?php print render($page['popular_post']); ?>
       </div>
     </div>
-  <!-- /.post -->
+ <?php endif; ?>
+
+
+
+<!-- /.post -->
   <?php if (!empty($page['sub_menu'])): ?>
     <div class="row large-12 sub-menu">
       <?php print render($page['sub_menu']); ?>
@@ -363,7 +285,7 @@
       </div>
     <?php endif; ?>
     <div class="developer small-12 large-6 right">
-        <a href="http://globaledge-media.com">Developed & Designed By Globaledge Media Solutions Inc.</a>
+        <a href="http://globaledge-media.com">Designed & Developed By Globaledge Media Solutions Inc.</a>
       </div>
   </footer>
   <!--/.footer-->

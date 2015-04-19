@@ -395,7 +395,7 @@ body{
 			position: relative;
 			margin-bottom: 30px;    
 		}
-	.sidebar-second {
+	.sidebar-second{
 			width: 33.33333%;
 		.block{
 			width: 300px;
@@ -487,7 +487,7 @@ body{
 		}
 	}
 	.sidebar-third {
-
+		width: 33.33333%;
 		margin-top: 20px;
 
 		.block{
@@ -513,7 +513,7 @@ body{
 
 		.post-article {
 				text-align: center;
-				margin: 0px 10em;
+				margin: 0px 5em;
 				height: 200px;
 			
 			.hover-container{
@@ -522,12 +522,28 @@ body{
 				background-position: center center;
 				padding-left: 0px;
 				padding-right: 0px;
-
-				.hover-content{
+				height: 220px;
+				position: relative;
+				display: inline-block;
+				width: 245px;
+				overflow: hidden;
+				img {
+					position:absolute;
+				    top:0%;
+				    min-height:100%;
+				    display:block;
+				    left:0%;
+				    min-width:100%;
+				}
+				.hover-content {
 					height: inherit;
 					background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.65);
-					opacity: 0;
 					@include transition(200ms);
+					height: inherit;
+					opacity: 0;
+					position: relative;
+					cursor: pointer;
+
 
 					&:hover{
 						opacity: 1;
@@ -539,10 +555,12 @@ body{
 						span{
 							@include font-family($banner-font, 0.8em);
 							text-transform: uppercase;
-
+							a{
+								color: $c2;
+							}
 						}
+					
 					}
-
 					.line{
 							color: #333 $i;
 							background-color: #9E9E9E;
@@ -561,7 +579,10 @@ body{
 							@include font-family($web-font, 1.1em);
 							text-transform: uppercase;
 							letter-spacing: 1px;
-
+							opacity: 0px;
+							a{
+								color: $c2;
+							}
 						}
 					}
 					.hover-content-date{
@@ -929,13 +950,38 @@ body{
 
 		.field-name-body{
 			margin-top: 20px;
+			
+		}
+		p{
+			#ads img
+				{
+						width: 25% ;
+	                }
 		}
 		.main{
 			width: 100%;
+
 		}
 		.l-main {
 			max-width: 62.5em !important;
+			.node-page{
+				.posted{
+					display: none;
+				}
+			}
 		}
+
+}
+.section-categorization{
+	.main{
+		width: 75%;
+	}
+	.sidebar-second{
+		width: 25%;
+	}
+	.sidebar-third{
+		width: 25%;
+	}
 }
 .node-type-webform{
 

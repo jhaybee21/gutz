@@ -27,13 +27,13 @@
 
        //Popular Article Effect
 
-       $(".post-article img").hover( function(){
-            $(this).find(".views-field-title, .views-field-created").show();
-            $(".views-field-title, .views-field-created").addClass('container');
-          },
-          function(){
-               $(this).find(".views-field-title, .views-field-created").hide();
-          });
+       // $(".post-article img").hover( function(){
+       //      $(this).find(".views-field-title, .views-field-created").show();
+       //      $(".views-field-title, .views-field-created").addClass('container');
+       //    },
+       //    function(){
+       //         $(this).find(".views-field-title, .views-field-created").hide();
+       //    });
 
        //Add Div Slicer
 
@@ -50,7 +50,7 @@
        $('.block-title').after('<center><div class="liner"></div></center>');
 
 
-       $('.front .l-main').after('<div class="row large-12"><div class="slicer-full"></div></div>');
+       $('.front .l-main').after('<div class="row large-12 l-slice"><div class="slicer-full"></div></div>');
 
        $('.no-sidebars .l-main').after('<div class="row large-12"><div class="slicer-full"></div></div>');
 
