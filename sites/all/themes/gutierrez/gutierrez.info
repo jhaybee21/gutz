@@ -85,6 +85,7 @@ regions[highlighted]         = Highlighted
 regions[featured]            = Featured
 regions[content]             = Content
 regions[gmap]             	 = Google Map
+regions[map_categories]      = Map Menu
 regions[popular_post]        = Post
 regions[sub_menu]            = Sub menu
 regions[sidebar_first]       = Left Sidebar

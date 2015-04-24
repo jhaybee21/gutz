@@ -261,6 +261,28 @@ body{
 			padding: 10px;
 		}
 
+		.views-field-field-address{
+			float: left;
+			text-align: right;
+			width: 50%;
+			padding: 0px;
+
+			.marker{
+				width:20px;
+				opacity: 0.4;
+			}
+		}
+		.views-field-created{
+			float: right;
+			text-align: left;
+			width: 50%;
+			padding: 3px;
+		}
+
+		.views-field-field-image{
+			margin-top: 20px;
+		}
+
 		.views-field-term-node-tid {
 
 			a {
@@ -500,7 +522,85 @@ body{
 			}
 		}
 	}
-	
+	.map {
+		margin-bottom: 5em;
+		h2{
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: normal;
+			margin-bottom: 0px;
+			@include font-family($main-title-font, 1.9em , $c2 $i );
+		}
+		.block-views-travel-block{
+			.view-id-travel{
+				.view-content{
+					margin-bottom: 10px;
+					table{
+						margin: 0px auto;
+						border: none $i;
+						.views-field-name{
+							text-align: center;
+							.field-content{
+								
+								padding: 10px;
+								a{
+									@include font-family($web-font, 0.9em , $c2 $i );
+									text-transform: uppercase;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#googleMap{
+			.gm-style{
+				.info_content{
+					width: 300px;
+					text-align: center;
+					.image{
+						float: left;
+						margin-right: 20px;
+						height: 162px;
+						width: 162px;
+						background-size: cover;
+						-moz-background-size: cover;
+						-webkit-background-size: cover;
+						-o-background-size: cover;
+						background-color: transparent;
+					}
+					h5{
+						text-transform: uppercase;
+						padding-top: 20px;
+						letter-spacing: 2px;
+						@include font-family($main-title-font, 0.8em , $c2 $i );
+					}
+					.title{
+						padding-top: 14px;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						line-height: 15px;
+						@include font-family($web-font, 1.2em , $c2 $i );
+					}
+					.line-container{
+						.line{
+							color: #333 !important;
+							background-color: #9E9E9E;
+							height: 2px;
+							width: 28px;
+							margin: 3px auto 30px;
+							border: none;
+							position: absolute;
+							right: 45px;
+						}
+					}
+					a{
+						color: $c2;
+					}
+				}
+			}
+		}
+	}
 	.post-article-container{
 		margin-bottom: 40px;
 

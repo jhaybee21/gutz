@@ -13,7 +13,7 @@
             $(".top-bar").css({"position": "fixed"});
             $(".top-bar").addClass('open');
             $(".open").find(".dropdown").attr("style","background: #fff")
-              console.log('if')
+          
             
           }else{
             $(".test").hide();
@@ -21,7 +21,7 @@
             $(".top-bar").css({"position": "absolute", "top": "0px"});
             $(".not-front .top-bar").css({"position": "relative", "top": "0px"});
             $(".dropdown").css({"background": "none"});
-            console.log('else')
+    
           }
         })
 
@@ -53,11 +53,12 @@
        $('.front .l-main').after('<div class="row large-12 l-slice"><div class="slicer-full"></div></div>');
 
        $('.no-sidebars .l-main').after('<div class="row large-12"><div class="slicer-full"></div></div>');
+       $('.main .views-field-created').prepend('<span class="slice">/</span>');
 
        //Add Twitter Icons
 
        $('.main .views-field-tweets').prepend('<span class="tweet"><img src="/sites/all/themes/gutierrez/images/twit.png"</span>');
-       $('.not-front .field-name-field-locate .vcard').before('<img class="marker" src="/sites/all/themes/gutierrez/images/marker.png">');
+       $('.main .views-field-field-address .field-content').prepend('<img class="marker" src="/sites/all/themes/gutierrez/images/marker.png">');
        //Add Facebook Icons
 
        $('.main .views-field-fb-likes').prepend('<span class="faceb"><img src="/sites/all/themes/gutierrez/images/fb.png"</span>');

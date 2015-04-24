@@ -197,11 +197,23 @@
   </main>
   <!--/.main-->
 
-  <?php if (!empty($page['gmap'])): ?>
-    <div class="large-12">
+ <!--  <?php if (!empty($page['gmap'])): ?>
+    <div class="large-12 column">
       <?php print render($page['gmap']); ?>
     </div>
+ <?php endif; ?> -->
+
+  <div class="large-12 center map">
+  <h2>Where to find Us</h2>
+   <?php if (!empty($page['map_categories'])): ?>
+    <div class="row large-12 map_categories">
+      <?php print render($page['map_categories']); ?>
+    </div>
  <?php endif; ?>
+
+
+     <div id="googleMap" style="width:100%;height:400px;"></div>
+    </div>
 
 <!-- Popular Post -->
  <?php if (!empty($page['popular_post'])): ?>
@@ -293,3 +305,85 @@
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
 </div>
 <!--/.page -->
+<!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
+<script>
+function initialize() {
+  jQuery.getJSON("http://livinglifewithgutz.dev/article-json", function(data){
+
+console.log(data)
+  var data_length = data.nodes.length;
+
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+      mapTypeId: 'roadmap',
+      disableDefaultUI: true,
+      panControl: false,
+      zoomControl: false,
+      scaleControl: false
+    };
+
+  var mapProp = {
+    center: new google.maps.LatLng(0, 0),
+    zoom:6,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    disableDefaultUI: true
+
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+  //Multiple Markers
+    var markers = [];
+    var infoWindowContent = [];
+
+    for(var x=0;x<data_length;x++){
+      var img_src = data.nodes[x].node['field_image'];
+      var title = data.nodes[x].node['title'];
+      var address = data.nodes[x].node['field_address'];
+      var date = data.nodes[x].node['Post date'];
+      var more = data.nodes[x].node['path'];
+      markers.push([data.nodes[x].node['field_latitude'], data.nodes[x].node['field_longitude']]);
+      infoWindowContent.push(['<div class="info_content large-12"><center><div class="image" style="background: url('+img_src.src+')  50% 50% no-repeat;"></div></center><h5>'+address+'</h5><div class="line-container"><hr class="line"></div><p class="address"><b></b></p><p class="title">'+title+'</p><p class="readmore"><a href="'+more+'">'+date+'</a></p></div>']);
+     
+     console.log(img_src)
+    }
+
+
+ var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}];
+
+   // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+    // Loop through our array of markers & place each one on the map
+    var category_img = "http://livinglifewithgutz.dev/sites/default/files/pin.png";
+    for( i = 0; i < markers.length; i++ ) {
+      var pin = markers[i][0];
+        var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0],
+            icon: category_img
+        });
+
+
+        // Allow each marker to have an info window
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(infoWindowContent[i][0]);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
+
+        // Automatically center the map fitting all markers on the screen
+        map.fitBounds(bounds);
+    }
+    console.log(markers)
+map.setOptions({styles: styles});
+ });
+
+
+}
+
+</script>
