@@ -36,7 +36,7 @@
        //    });
 
        //Add Div Slicer
-
+       $('.slice').remove();
        $('.slicer').remove();
        $('.liner').remove();
        $('.slicer-full').remove();
@@ -58,7 +58,7 @@
        //Add Twitter Icons
 
        $('.main .views-field-tweets').prepend('<span class="tweet"><img src="/sites/all/themes/gutierrez/images/twit.png"</span>');
-       $('.main .views-field-field-address .field-content').prepend('<img class="marker" src="/sites/all/themes/gutierrez/images/marker.png">');
+       $('.main .views-field-field-city .field-content').prepend('<img class="marker" src="/sites/all/themes/gutierrez/images/marker.png">');
        //Add Facebook Icons
 
        $('.main .views-field-fb-likes').prepend('<span class="faceb"><img src="/sites/all/themes/gutierrez/images/fb.png"</span>');

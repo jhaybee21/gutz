@@ -205,11 +205,36 @@
 
   <div class="large-12 center map">
   <h2>Where to find Us</h2>
-   <?php if (!empty($page['map_categories'])): ?>
+  
     <div class="row large-12 map_categories">
-      <?php print render($page['map_categories']); ?>
+      <div id="map">
+    <div id="map-navigation" class="map-navigation">
+        <a data-zoom="2" data-position="37.7733,-122.4367">
+            Whole Map
+        </a>
+        <a data-zoom="4" data-position="34.047863, 100.619655">
+            Asia
+        </a>
+        <a data-zoom="4" data-position="-25.274398, 133.775136">
+            Australia
+        </a>
+        <a data-zoom="4" data-position="54.525961, -105.255119">
+            North America
+        </a>
+        <a data-zoom="4" data-position="-8.783195, -55.491477">
+            South America
+        </a>
+        <a data-zoom="2" data-position="-82.86275189999999, -135">
+            Antartica
+        </a>
+        <a data-zoom="3" data-position="47.516231, 14.550072">
+            Europe
+        </a>
     </div>
- <?php endif; ?>
+</div>
+    </div>
+
+
 
 
      <div id="googleMap" style="width:100%;height:400px;"></div>
@@ -307,13 +332,18 @@
 <!--/.page -->
 <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
 <script>
+
+
 function initialize() {
   jQuery.getJSON("http://livinglifewithgutz.dev/article-json", function(data){
 
-console.log(data)
+
+
   var data_length = data.nodes.length;
 
     var map;
+    var continent;
+
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
       mapTypeId: 'roadmap',
@@ -323,14 +353,22 @@ console.log(data)
       scaleControl: false
     };
 
+  var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
   var mapProp = {
-    center: new google.maps.LatLng(0, 0),
+    center: myCenter,
     zoom:6,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true
 
   };
+
   var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+  map.setZoom(2);
+  });
 
   //Multiple Markers
     var markers = [];
@@ -342,10 +380,10 @@ console.log(data)
       var address = data.nodes[x].node['field_address'];
       var date = data.nodes[x].node['Post date'];
       var more = data.nodes[x].node['path'];
-      markers.push([data.nodes[x].node['field_latitude'], data.nodes[x].node['field_longitude']]);
-      infoWindowContent.push(['<div class="info_content large-12"><center><div class="image" style="background: url('+img_src.src+')  50% 50% no-repeat;"></div></center><h5>'+address+'</h5><div class="line-container"><hr class="line"></div><p class="address"><b></b></p><p class="title">'+title+'</p><p class="readmore"><a href="'+more+'">'+date+'</a></p></div>']);
+      markers.push([data.nodes[x].node['field_address_1'], data.nodes[x].node['field_address_2']]);
+      infoWindowContent.push(['<div class="info_content large-12"><center><a href="'+more+'"><div class="image" style="background: url('+img_src.src+')  50% 50% no-repeat;"></div></a></center><h5>'+address+'</h5><div class="line-container"><hr class="line"></div><p class="address"><b></b></p><a href="'+more+'"><p class="title">'+title+'</p></a><p class="readmore"><a href="'+more+'">'+date+'</a></p></div>']);
      
-     console.log(img_src)
+     
     }
 
 
@@ -379,11 +417,43 @@ console.log(data)
         // Automatically center the map fitting all markers on the screen
         map.fitBounds(bounds);
     }
-    console.log(markers)
+  
 map.setOptions({styles: styles});
+ var latitude = 0 ;
+  var longitude = 0 ; 
+
+var myLatLng = new google.maps.LatLng(-25.363882, 131.044922);
+  var mapOptions = {
+    zoom: 4,
+    center: myLatLng
+  };
+
+
+
+
+    document.getElementById('map-navigation').onclick = function(e) {
+    var pos = e.target.getAttribute('data-position');
+    // console.log(pos.split(','))
+    // var position = pos.split(',');
+    
+    var zoom = e.target.getAttribute('data-zoom');
+    if (pos && zoom) {
+        var position = pos.split(',');
+        var z = parseInt(zoom);
+          latitude = position[0];
+          longitude = position[1];
+
+        map.setZoom(z);
+        map.setCenter(new google.maps.LatLng(latitude, longitude));
+        return false;
+    }
+}
  });
 
 
 }
+
+</script>
+<script type="text/javascript">
 
 </script>
