@@ -377,7 +377,7 @@ function initialize() {
     for(var x=0;x<data_length;x++){
       var img_src = data.nodes[x].node['field_image'];
       var title = data.nodes[x].node['title'];
-      var address = data.nodes[x].node['field_address'];
+      var address = data.nodes[x].node['field_city'];
       var date = data.nodes[x].node['Post date'];
       var more = data.nodes[x].node['path'];
       markers.push([data.nodes[x].node['field_address_1'], data.nodes[x].node['field_address_2']]);
