@@ -335,7 +335,7 @@
 
 
 function initialize() {
-  jQuery.getJSON("http://livinglifewithgutz.dev/article-json", function(data){
+  jQuery.getJSON("http://gutierrez.cloudapp.net/article-json", function(data){
 
 
 
@@ -393,7 +393,7 @@ function initialize() {
     var infoWindow = new google.maps.InfoWindow(), marker, i;
 
     // Loop through our array of markers & place each one on the map
-    var category_img = "http://livinglifewithgutz.dev/sites/default/files/pin.png";
+    var category_img = "http://gutierrez.cloudapp.net/sites/default/files/pin.png";
     for( i = 0; i < markers.length; i++ ) {
       var pin = markers[i][0];
         var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
