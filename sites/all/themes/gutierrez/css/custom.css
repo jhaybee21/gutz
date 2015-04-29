@@ -8690,5 +8690,10 @@ body .inline {
     padding-bottom: 10px;
     text-align: center !important;
   }
+
+  /* line 176, ../scss/_media.scss */
+  #map-navigation a {
+    line-height: 37px;
+  }
 }
 /* min-width 1025px, large screens */
