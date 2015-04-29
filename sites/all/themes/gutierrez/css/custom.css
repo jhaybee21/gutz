@@ -8523,7 +8523,7 @@ body .inline {
 @media only screen and (min-width: 320px) and (max-width: 330px) {
   /* line 18, ../scss/_media.scss */
   .hover-container {
-    width: 300px !important;
+    width: 310px !important;
     margin-left: -14px;
   }
 }
