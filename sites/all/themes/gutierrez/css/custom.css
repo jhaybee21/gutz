@@ -8097,7 +8097,7 @@ body .page section .menu .menu .leaf {
 /* line 788, ../scss/_style.scss */
 body .page .social {
   text-align: center;
-  padding: 20px;
+  margin-top: 20px;
 }
 /* line 792, ../scss/_style.scss */
 body .page .social .icon {
@@ -8107,12 +8107,12 @@ body .page .social .icon {
 body .page .social a {
   color: #000 !important;
   letter-spacing: 2px;
-  line-height: 15px;
+  line-height: 20px;
 }
 /* line 805, ../scss/_style.scss */
 body .page .footer-first .social, body .page .footer-second .social, body .page .footer-third .social, body .page .footer-fourth .social {
   text-align: center;
-  padding: 20px;
+  margin-top: 20px;
 }
 /* line 809, ../scss/_style.scss */
 body .page .footer-first .social .icon, body .page .footer-second .social .icon, body .page .footer-third .social .icon, body .page .footer-fourth .social .icon {
