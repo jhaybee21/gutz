@@ -8,6 +8,17 @@
 		
 
 }
+@media only screen and (min-width: 409px) and (max-width: 430px){
+	.hover-container {
+	width: 425px $i;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 409px){
+	.hover-container {
+	width: 330px $i;
+	}
+}
+
 @media only screen and (min-width: 768px){
 	.top-bar .toggle-topbar.menu-icon{
 		right: 68px;
@@ -166,9 +177,7 @@
 	 .sidebar-third{
 		width: 100% $i;
 	}
-	.hover-container{
-		width: 343px $i;
-	}
+
 	.copyright, .developer{
 		padding-bottom: 10px;
 		text-align: center $i;
