@@ -8,6 +8,19 @@
 		
 
 }
+@media only screen and (min-width: 768px){
+	.top-bar .toggle-topbar.menu-icon{
+		right: 68px;
+	}
+	#main-menu{
+
+	}
+	.top-bar .toggle-topbar.menu-icon a span {
+	
+			box-shadow: 0 10px 0 1px #000, 0 16px 0 1px #000, 0 22px 0 1px #000;
+	}
+}
+
 
 
 @media only screen and (max-width: 768px) { 
@@ -150,8 +163,11 @@
 	.node-type-webform .webform-client-form .webform-component-textfield, .node-type-webform .webform-client-form .webform-component-email{
 		width: 100% $i;
 	}
-	.post-article-container .post-article .hover-container , .sidebar-third{
+	 .sidebar-third{
 		width: 100% $i;
+	}
+	.hover-container{
+		width: 343px $i;
 	}
 	.copyright, .developer{
 		padding-bottom: 10px;
