@@ -8434,19 +8434,24 @@ body .inline {
 }
 
 /* line 1124, ../scss/_style.scss */
+.node-type-article #discovery {
+  display: none;
+}
+
+/* line 1129, ../scss/_style.scss */
 .section-categorization .main {
   width: 75%;
 }
-/* line 1127, ../scss/_style.scss */
+/* line 1132, ../scss/_style.scss */
 .section-categorization .sidebar-second {
   width: 25%;
 }
-/* line 1130, ../scss/_style.scss */
+/* line 1135, ../scss/_style.scss */
 .section-categorization .sidebar-third {
   width: 25%;
 }
 
-/* line 1136, ../scss/_style.scss */
+/* line 1141, ../scss/_style.scss */
 .node-type-webform input[type="text"], .node-type-webform input[type="password"], .node-type-webform input[type="date"], .node-type-webform input[type="datetime"], .node-type-webform input[type="datetime-local"], .node-type-webform input[type="month"], .node-type-webform input[type="week"], .node-type-webform input[type="email"], .node-type-webform input[type="number"], .node-type-webform input[type="search"], .node-type-webform input[type="tel"], .node-type-webform input[type="time"], .node-type-webform input[type="url"], .node-type-webform textarea {
   border-radius: 0px;
   background-color: #FFF;
@@ -8465,68 +8470,68 @@ body .inline {
   padding-left: 20px;
   height: 3.313em;
 }
-/* line 1155, ../scss/_style.scss */
+/* line 1160, ../scss/_style.scss */
 .node-type-webform .posted {
   display: none;
 }
-/* line 1161, ../scss/_style.scss */
+/* line 1166, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file button {
   background: transparent;
   border: 1px solid #000;
   color: #000;
   float: left;
 }
-/* line 1167, ../scss/_style.scss */
+/* line 1172, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file .form-file {
   padding-bottom: 15px;
 }
-/* line 1170, ../scss/_style.scss */
+/* line 1175, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file .description {
   float: left;
   margin-left: 16px;
   margin-top: 10px;
 }
-/* line 1177, ../scss/_style.scss */
+/* line 1182, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information {
   margin-top: 3em !important;
   text-transform: uppercase;
 }
-/* line 1181, ../scss/_style.scss */
+/* line 1186, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested {
   margin-top: 0em;
 }
-/* line 1184, ../scss/_style.scss */
+/* line 1189, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested label {
   float: left;
 }
-/* line 1188, ../scss/_style.scss */
+/* line 1193, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested select {
   border: 1px solid #000;
   color: #000;
   padding: 10px;
   background: transparent;
 }
-/* line 1196, ../scss/_style.scss */
+/* line 1201, ../scss/_style.scss */
 .node-type-webform .webform-client-form fieldset {
   border: 1px solid #fff;
   padding-bottom: 0px;
   margin: 0px;
 }
-/* line 1202, ../scss/_style.scss */
+/* line 1207, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component--contact-informations {
   text-transform: uppercase;
 }
-/* line 1206, ../scss/_style.scss */
+/* line 1211, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component--description {
   margin: 10px;
   margin-bottom: 3em;
 }
-/* line 1212, ../scss/_style.scss */
+/* line 1217, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component-textfield, .node-type-webform .webform-client-form .webform-component-email {
   width: 50% !important;
   margin-bottom: 0px;
 }
-/* line 1218, ../scss/_style.scss */
+/* line 1223, ../scss/_style.scss */
 .node-type-webform .webform-client-form .secondary {
   width: 96%;
   padding-left: 0.9375em;
@@ -8537,7 +8542,7 @@ body .inline {
   border-radius: 0px;
 }
 
-/* line 1230, ../scss/_style.scss */
+/* line 1235, ../scss/_style.scss */
 .node-type-webform .post-article-container, .node-type-webform .slicer-full {
   display: none !important;
 }
@@ -8625,33 +8630,32 @@ body .inline {
   }
   /* line 83, ../scss/_media.scss */
   .toggle ul li {
-    border-bottom: 1px solid #000;
     padding: 10px;
   }
-  /* line 88, ../scss/_media.scss */
+  /* line 87, ../scss/_media.scss */
   .toggle ul li a {
     color: #000;
     margin-left: 10px;
   }
-  /* line 92, ../scss/_media.scss */
+  /* line 91, ../scss/_media.scss */
   .toggle ul li:last-child {
     border-bottom: none;
   }
-  /* line 100, ../scss/_media.scss */
+  /* line 99, ../scss/_media.scss */
   .toggle ul .has-dropdown .dropdown {
     display: none;
   }
-  /* line 103, ../scss/_media.scss */
+  /* line 102, ../scss/_media.scss */
   .toggle ul .has-dropdown .dropdown li:first-child {
     display: none !important;
   }
 
-  /* line 112, ../scss/_media.scss */
+  /* line 111, ../scss/_media.scss */
   .open {
     display: none;
   }
 
-  /* line 116, ../scss/_media.scss */
+  /* line 115, ../scss/_media.scss */
   .l-featured {
     position: relative !important;
     top: 10em !important;
@@ -8659,35 +8663,36 @@ body .inline {
     text-align: center !important;
     left: 0px !important;
   }
-  /* line 126, ../scss/_media.scss */
+  /* line 125, ../scss/_media.scss */
   .l-featured .view-content .field-content p {
     font-size: 20px !important;
   }
 
-  /* line 133, ../scss/_media.scss */
+  /* line 132, ../scss/_media.scss */
   .post-article {
     margin: 0px 1em !important;
   }
 
-  /* line 136, ../scss/_media.scss */
+  /* line 135, ../scss/_media.scss */
   .line {
     left: 9em !important;
   }
 
-  /* line 139, ../scss/_media.scss */
+  /* line 138, ../scss/_media.scss */
   .sidebar-second .block {
     width: 100% !important;
   }
 
-  /* line 145, ../scss/_media.scss */
+  /* line 144, ../scss/_media.scss */
   .title-area .name h1 a {
     font-size: 0.55em;
     display: inline !important;
   }
 
-  /* line 151, ../scss/_media.scss */
+  /* line 150, ../scss/_media.scss */
   .main {
     width: 100% !important;
+    margin-top: 20px;
   }
 
   /* line 154, ../scss/_media.scss */
