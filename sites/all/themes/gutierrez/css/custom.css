@@ -8393,24 +8393,60 @@ body .inline {
 }
 
 /* line 1088, ../scss/_style.scss */
-.page-newsletter .sidebar-second, .page-newsletter .sidebar-third {
+.page-newsletter .sidebar-second, .page-user .sidebar-second {
   display: none;
 }
+/* line 1092, ../scss/_style.scss */
+.page-newsletter .main, .page-user .main {
+  width: 62% !important;
+}
+/* line 1094, ../scss/_style.scss */
+.page-newsletter .main form, .page-user .main form {
+  text-align: left;
+}
+/* line 1096, ../scss/_style.scss */
+.page-newsletter .main form fieldset, .page-user .main form fieldset {
+  border: none;
+  padding: 0px !important;
+}
+/* line 1100, ../scss/_style.scss */
+.page-newsletter .main form fieldset input, .page-user .main form fieldset input {
+  border-color: #000;
+  padding: 20px;
+}
+/* line 1104, ../scss/_style.scss */
+.page-newsletter .main form fieldset .form-item-gender, .page-newsletter .main form fieldset .form-item-receive-format, .page-user .main form fieldset .form-item-gender, .page-user .main form fieldset .form-item-receive-format {
+  width: 35%;
+  float: left;
+}
+/* line 1107, ../scss/_style.scss */
+.page-newsletter .main form fieldset .form-item-gender select, .page-newsletter .main form fieldset .form-item-receive-format select, .page-user .main form fieldset .form-item-gender select, .page-user .main form fieldset .form-item-receive-format select {
+  width: 90%;
+  background: #000;
+  color: #fff;
+}
+/* line 1114, ../scss/_style.scss */
+.page-newsletter .main form button, .page-user .main form button {
+  width: 100%;
+  background: #000;
+  border-color: #000;
+  color: #fff !important;
+}
 
-/* line 1093, ../scss/_style.scss */
+/* line 1124, ../scss/_style.scss */
 .section-categorization .main {
   width: 75%;
 }
-/* line 1096, ../scss/_style.scss */
+/* line 1127, ../scss/_style.scss */
 .section-categorization .sidebar-second {
   width: 25%;
 }
-/* line 1099, ../scss/_style.scss */
+/* line 1130, ../scss/_style.scss */
 .section-categorization .sidebar-third {
   width: 25%;
 }
 
-/* line 1105, ../scss/_style.scss */
+/* line 1136, ../scss/_style.scss */
 .node-type-webform input[type="text"], .node-type-webform input[type="password"], .node-type-webform input[type="date"], .node-type-webform input[type="datetime"], .node-type-webform input[type="datetime-local"], .node-type-webform input[type="month"], .node-type-webform input[type="week"], .node-type-webform input[type="email"], .node-type-webform input[type="number"], .node-type-webform input[type="search"], .node-type-webform input[type="tel"], .node-type-webform input[type="time"], .node-type-webform input[type="url"], .node-type-webform textarea {
   border-radius: 0px;
   background-color: #FFF;
@@ -8429,68 +8465,68 @@ body .inline {
   padding-left: 20px;
   height: 3.313em;
 }
-/* line 1124, ../scss/_style.scss */
+/* line 1155, ../scss/_style.scss */
 .node-type-webform .posted {
   display: none;
 }
-/* line 1130, ../scss/_style.scss */
+/* line 1161, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file button {
   background: transparent;
   border: 1px solid #000;
   color: #000;
   float: left;
 }
-/* line 1136, ../scss/_style.scss */
+/* line 1167, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file .form-file {
   padding-bottom: 15px;
 }
-/* line 1139, ../scss/_style.scss */
+/* line 1170, ../scss/_style.scss */
 .node-type-webform .webform-component--upload-file .description {
   float: left;
   margin-left: 16px;
   margin-top: 10px;
 }
-/* line 1146, ../scss/_style.scss */
+/* line 1177, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information {
   margin-top: 3em !important;
   text-transform: uppercase;
 }
-/* line 1150, ../scss/_style.scss */
+/* line 1181, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested {
   margin-top: 0em;
 }
-/* line 1153, ../scss/_style.scss */
+/* line 1184, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested label {
   float: left;
 }
-/* line 1157, ../scss/_style.scss */
+/* line 1188, ../scss/_style.scss */
 .node-type-webform .webform-component--campaign-information--what-ad-option-you-are-interested select {
   border: 1px solid #000;
   color: #000;
   padding: 10px;
   background: transparent;
 }
-/* line 1165, ../scss/_style.scss */
+/* line 1196, ../scss/_style.scss */
 .node-type-webform .webform-client-form fieldset {
   border: 1px solid #fff;
   padding-bottom: 0px;
   margin: 0px;
 }
-/* line 1171, ../scss/_style.scss */
+/* line 1202, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component--contact-informations {
   text-transform: uppercase;
 }
-/* line 1175, ../scss/_style.scss */
+/* line 1206, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component--description {
   margin: 10px;
   margin-bottom: 3em;
 }
-/* line 1181, ../scss/_style.scss */
+/* line 1212, ../scss/_style.scss */
 .node-type-webform .webform-client-form .webform-component-textfield, .node-type-webform .webform-client-form .webform-component-email {
   width: 50% !important;
   margin-bottom: 0px;
 }
-/* line 1187, ../scss/_style.scss */
+/* line 1218, ../scss/_style.scss */
 .node-type-webform .webform-client-form .secondary {
   width: 96%;
   padding-left: 0.9375em;
@@ -8501,7 +8537,7 @@ body .inline {
   border-radius: 0px;
 }
 
-/* line 1199, ../scss/_style.scss */
+/* line 1230, ../scss/_style.scss */
 .node-type-webform .post-article-container, .node-type-webform .slicer-full {
   display: none !important;
 }
@@ -8710,6 +8746,11 @@ body .inline {
   /* line 193, ../scss/_media.scss */
   #map-navigation a {
     line-height: 37px;
+  }
+
+  /* line 197, ../scss/_media.scss */
+  .page-newsletter .main {
+    width: 100% !important;
   }
 }
 /* min-width 1025px, large screens */

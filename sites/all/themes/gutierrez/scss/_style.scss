@@ -1083,10 +1083,41 @@ body{
 		}
 
 }
-.page-newsletter{
-
-	.sidebar-second, .sidebar-third{
+.page-newsletter, .page-user{
+ 
+	.sidebar-second{
 		display: none;
+	}
+
+	.main{
+		width: 62% $i;
+		form{
+			text-align: left;
+			fieldset{
+				border: none;
+				padding: 0px $i;
+			 
+			input{
+				border-color: $c2;
+				padding: 20px;
+			}
+			.form-item-gender, .form-item-receive-format {
+				width: 35%;
+				float: left;
+				select{
+					width: 90%;
+					background: #000;
+					color: $c1;
+					}
+				}
+			}
+		   button{
+		   	width: 100%;
+			background: $c2;
+			border-color: $c2;
+			color: $c1 $i;
+		   }
+		}
 	}
 }
 .section-categorization{
