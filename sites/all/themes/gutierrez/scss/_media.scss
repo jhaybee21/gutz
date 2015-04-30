@@ -147,9 +147,13 @@
 
 		}
 	}
+	.not-front{
+		.main{
+			margin-top: 20px;
+		}
+	}
 	.main{
 		width:100% $i;
-		margin-top: 20px;
 	}
 	.sidebar-second{
 		width:100% $i;

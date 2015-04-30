@@ -8689,71 +8689,75 @@ body .inline {
     display: inline !important;
   }
 
-  /* line 150, ../scss/_media.scss */
-  .main {
-    width: 100% !important;
+  /* line 151, ../scss/_media.scss */
+  .not-front .main {
     margin-top: 20px;
   }
 
-  /* line 154, ../scss/_media.scss */
+  /* line 155, ../scss/_media.scss */
+  .main {
+    width: 100% !important;
+  }
+
+  /* line 158, ../scss/_media.scss */
   .sidebar-second {
     width: 100% !important;
   }
 
-  /* line 157, ../scss/_media.scss */
+  /* line 161, ../scss/_media.scss */
   .main .views-field-fb-likes, .main .views-field-tweets {
     margin-left: 2px !important;
     width: 30% !important;
   }
 
-  /* line 161, ../scss/_media.scss */
+  /* line 165, ../scss/_media.scss */
   .main .views-field-disqus-comment-count {
     width: 35% !important;
   }
 
-  /* line 164, ../scss/_media.scss */
+  /* line 168, ../scss/_media.scss */
   .top-bar .toggle-topbar.menu-icon {
     right: 20px !important;
     top: 55% !important;
   }
-  /* line 168, ../scss/_media.scss */
+  /* line 172, ../scss/_media.scss */
   .top-bar .toggle-topbar.menu-icon a {
     color: #000;
   }
-  /* line 171, ../scss/_media.scss */
+  /* line 175, ../scss/_media.scss */
   .top-bar .toggle-topbar.menu-icon a span {
     box-shadow: 0px 10px 0px 1px #000, 0px 16px 0px 1px #000, 0px 22px 0px 1px #000;
     -webkit-box-shadow: 0px 10px 0px 1px #000, 0px 16px 0px 1px #000, 0px 22px 0px 1px #000;
     -moz-box-shadow: 0px 10px 0px 1px #000, 0px 16px 0px 1px #000, 0px 22px 0px 1px #000;
   }
 
-  /* line 179, ../scss/_media.scss */
+  /* line 183, ../scss/_media.scss */
   .slicer-full {
     top: 20px !important;
   }
 
-  /* line 182, ../scss/_media.scss */
+  /* line 186, ../scss/_media.scss */
   .node-type-webform .webform-client-form .webform-component-textfield, .node-type-webform .webform-client-form .webform-component-email {
     width: 100% !important;
   }
 
-  /* line 185, ../scss/_media.scss */
+  /* line 189, ../scss/_media.scss */
   .sidebar-third {
     width: 100% !important;
   }
 
-  /* line 189, ../scss/_media.scss */
+  /* line 193, ../scss/_media.scss */
   .copyright, .developer {
     padding-bottom: 10px;
     text-align: center !important;
   }
 
-  /* line 193, ../scss/_media.scss */
+  /* line 197, ../scss/_media.scss */
   #map-navigation a {
     line-height: 37px;
   }
 
-  /* line 197, ../scss/_media.scss */
+  /* line 201, ../scss/_media.scss */
   .page-newsletter .main {
     width: 100% !important;
   }
