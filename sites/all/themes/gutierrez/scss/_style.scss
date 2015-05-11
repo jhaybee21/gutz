@@ -197,6 +197,15 @@ body{
 	  min-width: 100%;
 	  min-height: 100%;
 	  margin-bottom: 40px;
+	  	.opacity{
+	  		background: rgba(255, 255, 255, 0.07);
+			height: 100%;
+			width: 100%;
+
+				.block-views-homepage-block-1{
+					position: relative;
+				}
+	  	} 
 	}
 	
 

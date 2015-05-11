@@ -93,6 +93,7 @@
     <div class="page-background" style="background-image:<?php print 'url(' . $background . ')'; ?> ">
           <?php if (!empty($page['featured']) || !drupal_is_front_page()): ?>
     <!--/.featured -->
+    <div class="opacity">
     <section class="l-featured row">
       <div class="large-12 columns">
         <?php print render($page['featured']); ?>
@@ -121,7 +122,7 @@
     <!--/.l-help -->
   <?php endif; ?>
 
-
+    </div>
     </div>  
   <?php endif; ?>
 
@@ -358,8 +359,7 @@ function initialize() {
   var mapProp = {
     center: myCenter,
     zoom:6,
-    mapTypeId:google.maps.MapTypeId.ROADMAP,
-    disableDefaultUI: true
+    mapTypeId:google.maps.MapTypeId.ROADMAP
 
   };
 
