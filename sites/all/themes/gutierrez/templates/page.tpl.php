@@ -336,7 +336,7 @@
 
 
 function initialize() {
-  jQuery.getJSON("http://gutierrez.cloudapp.net/article-json", function(data){
+  jQuery.getJSON("http://livinglifewithgutz.dev/article-json", function(data){
 
 
 
