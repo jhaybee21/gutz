@@ -23,6 +23,7 @@
             $(".not-front .top-bar").css({"position": "relative", "top": "0px"});
             $(".dropdown").css({"background": "none"});
             $('ul#main-menu a, ul.title-area a').css({'color': '#fff'});
+            $('.dropdown').css({'border-color' : '#fff'});
           }
         })
 
