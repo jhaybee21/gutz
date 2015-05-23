@@ -81,7 +81,7 @@ body{
 				
 				a{
 					@include font-family($menu-font, 12px);
-					color: $c2;
+					color: #fff;
 					text-transform: lowercase;
 					white-space: normal $i;
 				}
@@ -137,7 +137,7 @@ body{
 				}
 				
 				.dropdown {
-					border: 1px solid $c2;
+					border: 1px solid #fff;
 					text-align: center;
 					background-color: $t;
 					text-align: left;
@@ -174,10 +174,10 @@ body{
 					height: 0;
 					position: absolute;
 					width: 0;
-					border-left: 5px solid $t;
-					border-right: 5px solid $t;                         
-					border-bottom: 5px solid black;
-					border-top-color: #333;
+					border-left: 5px solid rgba(0,0,0,0);
+					border-right: 5px solid rgba(0,0,0,0);                         
+					border-bottom: 5px solid #fff;
+					border-top-color: #fff;
 					bottom: 100%;
 					left: 50%;
 				}
@@ -197,10 +197,11 @@ body{
 	  min-width: 100%;
 	  min-height: 100%;
 	  margin-bottom: 40px;
-	  	.opacity{
-	  		background: rgba(255, 255, 255, 0.07);
-			height: 100%;
-			width: 100%;
+	  	.opacity {
+	  		background: rgba(0, 0, 0, 0.30);
+            height: 100%;
+            width: 100%;
+        
 
 				.block-views-homepage-block-1{
 					position: relative;
@@ -223,7 +224,7 @@ body{
 
 				a {
 					@include font-family($banner-font, 15px);
-					color: $c2;
+					color: #fff;
 					text-transform: lowercase;
 
 					&:after{
@@ -241,7 +242,7 @@ body{
 
 				p{
 					@include font-family($body-font, 30px);
-					color: $c2;
+					color: #fff;
 					top: 25px;
 					position: relative;
 				}
@@ -757,8 +758,8 @@ body{
 				@include font-family($title-font, 45px);
 
 				a {
-					color: $c2 $i;
-					font-weight: normal;
+					color: #fff;
+                    font-weight: normal;
 				}
 			}
 		}
