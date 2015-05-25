@@ -1,4 +1,7 @@
  <!--.l-header region -->
+ <?php 
+   global $base_url;
+ ?>
   <header role="banner" class="l-header">
     <?php if ($top_bar): ?>
       <!--.top-bar -->
@@ -330,16 +333,17 @@
 
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
 </div>
+
+
+
 <!--/.page -->
 <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
 <script>
 
 
 function initialize() {
-  jQuery.getJSON("http://gutierrez.cloudapp.net/article-json", function(data){
 
-
-
+  jQuery.getJSON("<?php print $base_url; ?>/article-json", function(data){
   var data_length = data.nodes.length;
 
     var map;
