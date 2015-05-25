@@ -84,6 +84,7 @@ regions[help]                = Help
 regions[highlighted]         = Highlighted
 regions[featured]            = Featured
 regions[content]             = Content
+regions[content_ads]         = Content Ads
 regions[gmap]             	 = Google Map
 regions[map_categories]      = Map Menu
 regions[popular_post]        = Post

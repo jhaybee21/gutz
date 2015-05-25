@@ -172,7 +172,16 @@
       <?php endif; ?>
 
       <?php print render($page['content']); ?>
+
+      <!-- Setting the Custom Regions for Advertisements on Articles only -->
+
+      <div class="large-12">
+        <?php print render($page['content_ads']); ?>
+      </div>
     </div>
+
+
+
     <!--/.main region -->
 
     <?php if (!empty($page['sidebar_first'])): ?>
