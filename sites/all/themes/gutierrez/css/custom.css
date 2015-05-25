@@ -8583,21 +8583,24 @@ body.not-front .dropdown {
 /* line 1275, ../scss/_style.scss */
 section.block-views-content-ads-block div.views-field {
   padding: 0px;
+  margin-bottom: 20px;
 }
 
-/* line 1279, ../scss/_style.scss */
+/* line 1280, ../scss/_style.scss */
 div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
   width: 50%;
+  padding-bottom: 20px;
 }
-/* line 1280, ../scss/_style.scss */
+/* line 1281, ../scss/_style.scss */
 div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content img {
   width: 100%;
 }
 
-/* line 1286, ../scss/_style.scss */
+/* line 1288, ../scss/_style.scss */
 div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
 div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
   width: 25%;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1111px) {

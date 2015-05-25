@@ -1274,6 +1274,7 @@ body.not-front {
 
 section.block-views-content-ads-block div.views-field {
   padding: 0px;
+  margin-bottom: 20px;
 }
 
 div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
@@ -1281,9 +1282,11 @@ div.view-content div:nth-child(1) div.views-field-field-link-image div.field-con
     width: 100%;
 	}
 	width: 50%;
+	padding-bottom: 20px;
 }
 
 div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
 div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
 	width: 25%;
+	padding-bottom: 20px;
 }
