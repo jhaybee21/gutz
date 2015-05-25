@@ -345,7 +345,6 @@ function initialize() {
 
   jQuery.getJSON("<?php print $base_url; ?>/article-json", function(data){
   var data_length = data.nodes.length;
-
     var map;
     var continent;
 
@@ -397,7 +396,7 @@ function initialize() {
     var infoWindow = new google.maps.InfoWindow(), marker, i;
 
     // Loop through our array of markers & place each one on the map
-    var category_img = "http://livinglifewithgutz.dev/sites/default/files/pin.png";
+    var category_img = "<?php print $base_url; ?>/sites/default/files/pin.png";
     for( i = 0; i < markers.length; i++ ) {
       var pin = markers[i][0];
         var position = new google.maps.LatLng(markers[i][0], markers[i][1]);
