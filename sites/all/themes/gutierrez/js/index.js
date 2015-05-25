@@ -6,24 +6,25 @@
       $('.page-background', context).css('height', $(window).height());
        $(document).scroll(function()
         {
-          var scroll = $(this).scrollTop();
-          // console.log(scroll);
-          if(scroll >= 550){
-            $(".test").slideDown();
-            $(".top-bar").css({"position": "fixed"});
-            $(".top-bar").addClass('open');
-            $(".open").find(".dropdown").attr("style","background: #fff");
-            $('ul#main-menu a, ul.title-area a').css({'color': '#000'});
-            $('.dropdown').css({'border-color' : '#000'});
-            
-          } else{
-            $(".test").hide();
-            $(".top-bar").removeClass('open')
-            $(".top-bar").css({"position": "absolute", "top": "0px"});
-            $(".not-front .top-bar").css({"position": "relative", "top": "0px"});
-            $(".dropdown").css({"background": "none"});
-            $('ul#main-menu a, ul.title-area a').css({'color': '#fff'});
-            $('.dropdown').css({'border-color' : '#fff'});
+          if ($('body').hasClass('front')) {
+            var scroll = $(this).scrollTop();
+            // console.log(scroll);
+            if (scroll >= 550) {
+              $(".test").slideDown();
+              $(".top-bar").css({"position": "fixed"});
+              $(".top-bar").addClass('open');
+              $(".open").find(".dropdown").attr("style","background: #fff");
+              $('ul#main-menu a, ul.title-area a').css({'color': '#000'});
+              $('.dropdown').css({'border-color' : '#000'});
+            } else {
+              $(".test").hide();
+              $(".top-bar").removeClass('open')
+              $(".top-bar").css({"position": "absolute", "top": "0px"});
+              $(".not-front .top-bar").css({"position": "relative", "top": "0px"});
+              $(".dropdown").css({"background": "none"});
+              $('ul#main-menu a, ul.title-area a').css({'color': '#fff'});
+              $('.dropdown').css({'border-color' : '#fff'});
+            }
           }
         })
 

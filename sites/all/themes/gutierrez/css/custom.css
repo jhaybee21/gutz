@@ -8557,6 +8557,28 @@ body .inline {
   display: none !important;
 }
 
+/* May 25, 2015, Setting the look and feel of the header navigation font color as black */
+/* line 1252, ../scss/_style.scss */
+body.not-front nav.top-bar .title-area a {
+  color: #000;
+}
+/* line 1255, ../scss/_style.scss */
+body.not-front nav.top-bar #main-menu li a {
+  color: #000;
+}
+
+/* line 1261, ../scss/_style.scss */
+body.not-front .dropdown:after {
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+  border-bottom: 5px solid #000 !important;
+  border-top-color: #000 !important;
+}
+/* line 1268, ../scss/_style.scss */
+body.not-front .dropdown {
+  border: 1px solid #000 !important;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1111px) {
   /* line 4, ../scss/_media.scss */
   .title-area {

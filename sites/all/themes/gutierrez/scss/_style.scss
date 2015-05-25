@@ -66,7 +66,7 @@ body{
 
 // BACKGROUND
 
-body{
+body {
 	background: $c1;
 
 	.toggle {
@@ -750,7 +750,7 @@ body{
 
 
 
-	.title-area{
+	.title-area {
 			margin-left: 2em $i;
 		.name{
 				
@@ -1244,5 +1244,28 @@ body{
 .node-type-webform{
 		.post-article-container, .slicer-full{
 			display: none $i;
+	}
+}
+
+/* May 25, 2015, Setting the look and feel of the header navigation font color as black */
+body.not-front nav.top-bar {
+	.title-area a {
+	  color: #000;
+  }
+  #main-menu li a {
+	  color: #000;
+  }
+}
+
+body.not-front {
+	.dropdown:after {
+		border-left: 5px solid #fff;
+		border-right: 5px solid #fff; 
+		border-bottom: 5px solid #000 !important;
+		border-top-color: #000 !important;
+	}
+
+	.dropdown {
+		 border: 1px solid #000 !important;
 	}
 }
