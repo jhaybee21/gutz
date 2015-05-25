@@ -366,10 +366,10 @@ function initialize() {
     center: myCenter,
     zoom:6,
     mapTypeId:google.maps.MapTypeId.ROADMAP
-
+    scrollwheel: false,
   };
 
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
 
   google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
