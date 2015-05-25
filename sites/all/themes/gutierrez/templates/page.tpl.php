@@ -357,7 +357,7 @@ function initialize() {
       zoomControl: false,
       scaleControl: false,
       draggable: false,
-      scrollWheel: false,
+      scrollwheel: false,
     };
 
   var myCenter=new google.maps.LatLng(51.508742,-0.120850);
@@ -431,7 +431,8 @@ map.setOptions({styles: styles});
 var myLatLng = new google.maps.LatLng(-25.363882, 131.044922);
   var mapOptions = {
     zoom: 4,
-    center: myLatLng
+    center: myLatLng,
+    scrollwheel: false,
   };
 
 
