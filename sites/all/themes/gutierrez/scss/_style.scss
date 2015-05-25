@@ -1269,3 +1269,17 @@ body.not-front {
 		 border: 1px solid #000 !important;
 	}
 }
+
+/* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
+
+section.block-views-content-ads-block {
+  div.views-field-field-link-image {
+    div.field-content {
+    	padding: 0 30px;
+    }
+	  padding: 0px;
+  }
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
