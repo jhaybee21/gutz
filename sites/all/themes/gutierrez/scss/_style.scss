@@ -1272,14 +1272,18 @@ body.not-front {
 
 /* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
 
-section.block-views-content-ads-block {
-  div.views-field-field-link-image {
-    div.field-content {
-    	// padding: 0 30px;
-    }
-	  padding: 0px;
-  }
-  text-align: center;
-  z-index: 1;
-  position: relative;
+section.block-views-content-ads-block div.views-field {
+  padding: 0px;
+}
+
+div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
+	img {
+    width: 100%;
+	}
+	width: 50%;
+}
+
+div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
+div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
+	width: 25%;
 }

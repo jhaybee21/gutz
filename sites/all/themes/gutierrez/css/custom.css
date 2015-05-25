@@ -8581,14 +8581,23 @@ body.not-front .dropdown {
 
 /* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
 /* line 1275, ../scss/_style.scss */
-section.block-views-content-ads-block {
-  text-align: center;
-  z-index: 1;
-  position: relative;
-}
-/* line 1276, ../scss/_style.scss */
-section.block-views-content-ads-block div.views-field-field-link-image {
+section.block-views-content-ads-block div.views-field {
   padding: 0px;
+}
+
+/* line 1279, ../scss/_style.scss */
+div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
+  width: 50%;
+}
+/* line 1280, ../scss/_style.scss */
+div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content img {
+  width: 100%;
+}
+
+/* line 1286, ../scss/_style.scss */
+div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
+div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
+  width: 25%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1111px) {
