@@ -8590,10 +8590,6 @@ section.block-views-content-ads-block {
 section.block-views-content-ads-block div.views-field-field-link-image {
   padding: 0px;
 }
-/* line 1277, ../scss/_style.scss */
-section.block-views-content-ads-block div.views-field-field-link-image div.field-content {
-  padding: 0 30px;
-}
 
 @media only screen and (min-width: 768px) and (max-width: 1111px) {
   /* line 4, ../scss/_media.scss */
