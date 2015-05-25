@@ -365,7 +365,7 @@ function initialize() {
   var mapProp = {
     center: myCenter,
     zoom:6,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
   };
 
