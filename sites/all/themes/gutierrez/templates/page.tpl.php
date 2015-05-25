@@ -355,7 +355,11 @@ function initialize() {
       disableDefaultUI: true,
       panControl: false,
       zoomControl: false,
-      scaleControl: false
+      scaleControl: false,
+      draggable: false,
+      scrollwheel: false,
+      navigationControl: false,
+      mapTypeControl: false
     };
 
   var myCenter=new google.maps.LatLng(51.508742,-0.120850);
