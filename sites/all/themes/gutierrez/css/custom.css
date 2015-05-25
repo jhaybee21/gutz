@@ -8581,22 +8581,25 @@ body.not-front .dropdown {
 
 /* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
 /* line 1275, ../scss/_style.scss */
+section.block-views-content-ads-block {
+  z-index: 1;
+}
+/* line 1276, ../scss/_style.scss */
 section.block-views-content-ads-block div.views-field {
   padding: 0px;
-  margin-bottom: 20px;
 }
 
-/* line 1280, ../scss/_style.scss */
+/* line 1282, ../scss/_style.scss */
 div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
   width: 50%;
   padding-bottom: 20px;
 }
-/* line 1281, ../scss/_style.scss */
+/* line 1283, ../scss/_style.scss */
 div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content img {
   width: 100%;
 }
 
-/* line 1288, ../scss/_style.scss */
+/* line 1290, ../scss/_style.scss */
 div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
 div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
   width: 25%;
