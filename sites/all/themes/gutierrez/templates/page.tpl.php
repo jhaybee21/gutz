@@ -356,8 +356,6 @@ function initialize() {
       panControl: false,
       zoomControl: false,
       scaleControl: false,
-      draggable: false,
-      scrollwheel: false,
     };
 
   var myCenter=new google.maps.LatLng(51.508742,-0.120850);
@@ -369,7 +367,7 @@ function initialize() {
     scrollwheel: false,
   };
 
-  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
 
   google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
@@ -431,8 +429,7 @@ map.setOptions({styles: styles});
 var myLatLng = new google.maps.LatLng(-25.363882, 131.044922);
   var mapOptions = {
     zoom: 4,
-    center: myLatLng,
-    scrollwheel: false,
+    center: myLatLng
   };
 
 
