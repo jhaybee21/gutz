@@ -1265,23 +1265,25 @@ body.not-front {
 
 /* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
 
-section.block-views-content-ads-block {
+body.not-front {
+  section.block-views-content-ads-block {
 	div.views-field {
-    padding: 0px;
+      padding: 0px;
+    }
+    z-index: 1;
   }
-  z-index: 1;
-}
 
-div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
-	img {
-    width: 100%;
-	}
-	width: 50%;
-	padding-bottom: 20px;
-}
+  div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
+	  img {
+        width: 100%;
+	  }
+	    width: 50%;
+	    padding-bottom: 20px;
+  }
 
-div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
-div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
-	width: 25%;
-	padding-bottom: 20px;
-}
+  div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
+  div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
+	  width: 25%;
+	  padding-bottom: 20px;
+  }
+  }
