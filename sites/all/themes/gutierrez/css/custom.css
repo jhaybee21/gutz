@@ -8575,25 +8575,25 @@ body.not-front .dropdown {
 
 /* May 25 : Setting the Look and Feel for the Block Content Ads for every Article */
 /* line 1270, ../scss/_style.scss */
-body.not-front section.block-views-content-ads-block {
+body.node-type-article section.block-views-content-ads-block {
   z-index: 1;
 }
 /* line 1271, ../scss/_style.scss */
-body.not-front section.block-views-content-ads-block div.views-field {
+body.node-type-article section.block-views-content-ads-block div.views-field {
   padding: 0px;
 }
 /* line 1277, ../scss/_style.scss */
-body.not-front div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
+body.node-type-article div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content {
   width: 50%;
   padding-bottom: 20px;
 }
 /* line 1278, ../scss/_style.scss */
-body.not-front div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content img {
+body.node-type-article div.view-content div:nth-child(1) div.views-field-field-link-image div.field-content img {
   width: 100%;
 }
 /* line 1285, ../scss/_style.scss */
-body.not-front div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
-body.not-front div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
+body.node-type-article div.view-content div:nth-child(2) div.views-field-field-link-image div.field-content,
+body.node-type-article div.view-content div:nth-child(3) div.views-field-field-link-image div.field-content {
   width: 25%;
   padding-bottom: 20px;
 }
