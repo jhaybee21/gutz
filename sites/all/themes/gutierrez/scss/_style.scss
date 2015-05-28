@@ -75,7 +75,7 @@ body {
 
 	.l-header{
 
-		#main-menu{
+		#main-menu {
 			
 			li{
 				
@@ -169,6 +169,14 @@ body {
 
 				}
 
+				.tooltip-black:after {
+					border-bottom: 5px solid #000;
+				}
+
+				.tooltip-white:after {
+					border-bottom: 5px solid #fff;
+				}
+
 				.dropdown:after {
 					content: ' ';
 					height: 0;
@@ -176,8 +184,6 @@ body {
 					width: 0;
 					border-left: 5px solid rgba(0,0,0,0);
 					border-right: 5px solid rgba(0,0,0,0);                         
-					border-bottom: 5px solid #fff;
-					border-top-color: #fff;
 					bottom: 100%;
 					left: 50%;
 				}
@@ -966,7 +972,7 @@ body {
 
 .front{
 
-	#main-menu{
+	#main-menu {
 		
 		li{
 			
@@ -1033,19 +1039,6 @@ body {
 				.dropdown {
 					border: 1px solid $c2;
 					text-align: center;    
-				}
-
-				.dropdown:after {
-					content: ' ';
-					height: 0;
-					position: absolute;
-					width: 0;
-					border-left: 5px solid $t;
-					border-right: 5px solid $t;                         
-					border-bottom: 5px solid black;
-					border-top-color: #333;
-					bottom: 100%;
-					left: 50%;
 				}
 
 				.has-dropdown > a{

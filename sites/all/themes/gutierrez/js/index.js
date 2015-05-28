@@ -3,12 +3,13 @@
   Drupal.behaviors.homepage = {
     attach: function (context, settings) {
 
+      $('.dropdown').addClass('tooltip-white');
+
       $('.page-background', context).css('height', $(window).height());
        $(document).scroll(function()
         {
           if ($('body').hasClass('front')) {
             var scroll = $(this).scrollTop();
-            // console.log(scroll);
             if (scroll >= 550) {
               $(".test").slideDown();
               $(".top-bar").css({"position": "fixed"});
@@ -16,6 +17,9 @@
               $(".open").find(".dropdown").attr("style","background: #fff");
               $('ul#main-menu a, ul.title-area a').css({'color': '#000'});
               $('.dropdown').css({'border-color' : '#000'});
+              $('.dropdown').removeClass('tooltip-white');
+              $('.dropdown').addClass('tooltip-black');
+
             } else {
               $(".test").hide();
               $(".top-bar").removeClass('open')
@@ -24,6 +28,8 @@
               $(".dropdown").css({"background": "none"});
               $('ul#main-menu a, ul.title-area a').css({'color': '#fff'});
               $('.dropdown').css({'border-color' : '#fff'});
+              $('.dropdown').removeClass('tooltip-black');
+              $('.dropdown').addClass('tooltip-white');
             }
           }
         })
